@@ -49,6 +49,16 @@ PreSyncing                           Syncing                               Succe
                                 +-----------------+
 ```
 
+## Filecoin
+
+### Storage for Filecoin
+
+Calculate the CID of the file, establish the index, retrieve the filecoin network, whether there are n copies. If so, discard the storage. Otherwise, save the file to the filecoin until the number of copies is n.
+
+### Syncing for Filecoin
+
+In order to save disk space, the server will cache the latest n-year production files, and automatically clean up the expired files. When users need to retrieve data, they will synchronize the data from the filecoin network and distribute the data to the client.
+
 ## Building
 
 Go version: 1.13
